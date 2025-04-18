@@ -16,6 +16,12 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Font Awesome para iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -29,7 +35,7 @@
       </ul>
     </nav>
     <main>
-      <section class="profile-container">
+      <section id="link1" class="profile-container">
         <div class="profile-image-container">
           <img
             class="profile-pic"
@@ -50,34 +56,99 @@
             Me llama la atención el desarrollo de front ends creativos, que se
             destaquen visualmente y ofrezcan experiencias únicas. Busco combinar
             diseño moderno con funcionalidad intuitiva para crear interfaces
-            memorables.
+            llamativas.
           </p>
 
           <div class="skills-container">
             <h3>Habilidades</h3>
             <div class="skills-grid">
               <div class="skill-item">
-                <div class="skill-icon">HTML5</div>
+                <div class="skill-icon">
+                  <i
+                    class="fa-brands fa-html5"
+                    style="color: #e44d26; font-size: 24px"
+                  ></i>
+                </div>
                 <span>HTML5</span>
               </div>
               <div class="skill-item">
-                <div class="skill-icon">CSS3</div>
+                <div class="skill-icon">
+                  <i
+                    class="fa-brands fa-css3-alt"
+                    style="color: #1572b6; font-size: 24px"
+                  ></i>
+                </div>
                 <span>CSS3</span>
               </div>
               <div class="skill-item">
-                <div class="skill-icon">JS</div>
+                <div class="skill-icon">
+                  <i
+                    class="fa-brands fa-js"
+                    style="color: #f7df1e; font-size: 24px"
+                  ></i>
+                </div>
                 <span>JavaScript</span>
               </div>
               <div class="skill-item">
-                <div class="skill-icon">UI</div>
-                <span>UI Design</span>
+                <div class="skill-icon">
+                  <img
+                    src="./resources/icons/react-icon.svg"
+                    alt="React Icon"
+                    width="24"
+                    height="24"
+                  />
+                </div>
+                <span>React</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <span
+                    style="
+                      background-color: #3178c6;
+                      color: white;
+                      font-weight: bold;
+                      display: inline-block;
+                      width: 24px;
+                      height: 24px;
+                      text-align: center;
+                      border-radius: 3px;
+                      line-height: 24px;
+                      font-size: 14px;
+                    "
+                    >TS</span
+                  >
+                </div>
+                <span>Typescript</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i
+                    class="fas fa-wind"
+                    style="color: #06b6d4; font-size: 24px"
+                  ></i>
+                </div>
+                <span>Tailwind</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i
+                    class="fas fa-project-diagram"
+                    style="color: #000000; font-size: 24px"
+                  ></i>
+                </div>
+                <span>Next.js</span>
               </div>
             </div>
           </div>
 
           <div class="profile-links">
-            <a href="#" class="profile-link">Portfolio</a>
-            <a href="#" class="profile-link">Contacto</a>
+            <a
+              href="https://github.com/blassmm"
+              class="profile-link"
+              target="_blank"
+              >Portfolio</a
+            >
+            <a href="#" class="profile-link" id="contact-button">Contacto</a>
           </div>
         </div>
       </section>
@@ -323,21 +394,6 @@
           <tr class="row-6">
             <td class="color2"></td>
             <td class="color2"></td>
-            <td class="color2"></td>
-            <td class="color2"></td>
-            <td class="color2"></td>
-            <td class="color2"></td>
-            <td class="color2"></td>
-            <td class="color2"></td>
-            <td class="color2"></td>
-            <td class="color2"></td>
-            <td class="color2"></td>
-            <td class="color2"></td>
-            <td class="color2"></td>
-          </tr>
-          <tr class="row-6">
-            <td class="color2"></td>
-            <td class="color2"></td>
             <td class="color1"></td>
             <td class="color2"></td>
             <td class="color2"></td>
@@ -368,6 +424,21 @@
         </table>
       </section>
     </main>
+
+    <!-- Agregar el popup y overlay -->
+    <div class="overlay" id="overlay"></div>
+    <div class="contact-popup" id="contact-popup">
+      <h3>Información de Contacto</h3>
+      <div class="contact-info">
+        <p><strong>Email:</strong> montanariblas@hotmail.com</p>
+        <p><strong>Teléfono:</strong> 2213523273</p>
+      </div>
+      <button class="popup-close" id="close-popup">Cerrar</button>
+    </div>
+
     <footer>Footer</footer>
+
+    <!-- Referencia al archivo JavaScript externo -->
+    <script src="js/contactPopup.js"></script>
   </body>
 </html>
