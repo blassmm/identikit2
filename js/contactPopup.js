@@ -20,3 +20,15 @@ document.addEventListener("DOMContentLoaded", function () {
     popup.style.display = "none";
   });
 });
+
+function scroll(direction, element) {
+  const scrollAmount = 200;
+
+  if (element) {
+    if (direction === "left") {
+      element.scrollLeft -= scrollAmount;
+    } else if (direction === "right") {
+      element.scrollLeft += scrollAmount;
+    }
+  }
+}
