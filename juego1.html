@@ -1,25 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego Bitcoin</title>
+    <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/juego.css" />
-</head>
-<body>
-    <nav></nav>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html#link1">Inicio</a></li>
+        <li><a href="index.html#link2">Webs de interés</a></li>
+        <li><a href="index.html#link3">Tabla</a></li>
+        <li><a href="juego1.html">Juego</a></li>
+        <li><a href="cancion1.html">Música</a></li>
+      </ul>
+    </nav>
     <main>
-        <section class="section-1">
-            <h1>Selecciona el valor correcto de la conversion</h1>
-            <div>
-                <a href="juego2.html">
-                    <img src="" alt="">
-                </a>
-                <a href="juego3.html">
-                    <img src="" alt="">
-                </a>
-            </div>
-        </section>
+      <section class="section-1">
+        <div class="section-1-overlay"></div>
+        <h1>
+          Elige la opción correcta para ganar 1 Bitcoin
+        </h1>
+        <div class="btc-wrapper" id="btcWrapper">
+          <a href="juego2.html" class="animated-element bitcoin-link">
+            <img
+              src="./resources/btc.webp"
+              alt="Bitcoin 1"
+              class="bitcoin-img"
+            />
+          </a>
+          <a
+            href="juego3.html"
+            class="animated-element bitcoin-link"
+            style="animation-delay: 1s"
+          >
+            <img
+              src="./resources/btc.webp"
+              alt="Bitcoin 2"
+              class="bitcoin-img"
+            />
+          </a>
+        </div>
+      </section>
     </main>
-</body>
+
+    
+  </body>
 </html>
