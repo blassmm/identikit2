@@ -8,20 +8,37 @@ main {
   padding: 20px;
 }
 
+.estilo-fondo-top{
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  width: 110%;
+  height: 20px;
+  background-color: #02a6cf;
+}
+
+.estilo-fondo-bottom{
+  position: absolute;
+  bottom: 0;
+  width: 110%;
+  height: 20px;
+  background-color: #02a6cf;
+  overflow: hidden;
+}
+
 section {
-  flex: 7;
-  height: auto;
+  display: flex;
+  flex: 4;
+  flex-direction: column;
   min-height: 400px;
   background-color: rgba(255, 255, 255, 0.9);
   border: none;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  overflow-y: auto;
   position: relative;
 }
 
-/* Estilo para que los iframes ocupen todo el espacio disponible */
 section iframe {
   width: 100%;
   height: 100%;
@@ -39,7 +56,7 @@ section iframe {
 }
 
 .aside-hamburger {
-  display: none; /* Por defecto está oculto */
+  display: none;
   position: fixed;
   left: 15px;
   bottom: 20px;
@@ -62,12 +79,12 @@ section iframe {
 }
 
 .aside-hamburger.active i:before {
-  content: "\f00d"; /* Cambia a icono X cuando está activo */
+  content: "\f00d"; 
 }
 
 aside {
   position: sticky;
-  top: 70px; /* Un poco por debajo del nav para dejar espacio */
+  top: 70px;
   align-self: flex-start;
   height: auto;
   max-height: calc(100vh - 100px);
@@ -155,7 +172,6 @@ aside {
   transform: translateY(-2px);
 }
 
-/* Media queries para diferentes tamaños de pantalla */
 @media (max-width: 900px) {
   main {
     max-width: 100%;
@@ -170,18 +186,20 @@ aside {
   }
 
   section {
-    flex: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     max-width: 100%;
-    min-height: 300px;
-    order: 1; /* Coloca la sección antes que el aside */
+    min-height: 70vh;
+    order: 1;
   }
 
   .aside-container {
     flex: none;
     width: 100%;
     max-width: 100%;
-    order: 2; /* Coloca el contenedor aside después de la sección */
+    order: 2;
   }
 
   .aside-hamburger {
@@ -257,7 +275,12 @@ aside {
 
   section {
     padding: 15px;
-    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    min-height: 70vh;
   }
 
   aside.aside-menu {
